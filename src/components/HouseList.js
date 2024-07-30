@@ -25,7 +25,7 @@ const HouseList = () => {
         className="text-center text-3xl 
     tex-gray-400 mt-48"
       >
-        Sorry Không tìm thấy gì hết
+        Sorry No Houses Matched Your Search
       </div>
     );
   }

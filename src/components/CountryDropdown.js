@@ -26,7 +26,7 @@ const CountryDropdown = () => {
           >
             {country}
           </div>
-          <div className="text-[13px]">Select your place</div>
+          <div className="text-[13px]">Select your country</div>
         </div>
         {isOpen ? (
           <RiArrowUpSLine className="dropdown-icon-secondary" />
@@ -39,7 +39,10 @@ const CountryDropdown = () => {
         {countries.map((country, index) => {
           return (
             <Menu.Item
-              onClick={() => setCountry(country)}
+              onClick={() => {
+                setCountry(country);
+                setIsOpen(false);
+              }}
               className="cursor-pointer
              hover:text-violet-700 transition"
               as="li"

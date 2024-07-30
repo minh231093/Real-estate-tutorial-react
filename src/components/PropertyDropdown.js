@@ -26,7 +26,7 @@ const PropertyDropdown = () => {
           >
             {property}
           </div>
-          <div className="text-[13px]">Select your place</div>
+          <div className="text-[13px]">Select your type</div>
         </div>
         {isOpen ? (
           <RiArrowUpSLine className="dropdown-icon-secondary" />
@@ -39,7 +39,10 @@ const PropertyDropdown = () => {
         {properties.map((property, index) => {
           return (
             <Menu.Item
-              onClick={() => setProperty(property)}
+              onClick={() => {
+                setProperty(property);
+                setIsOpen(false);
+              }}
               className="cursor-pointer
              hover:text-violet-700 transition"
               as="li"
